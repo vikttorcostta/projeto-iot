@@ -1,38 +1,64 @@
 <nz-layout class="app-layout">
-  <nz-sider class="menu-sidebar"
+  <nz-sider nzTheme="light" class="menu-sidebar"
     nzCollapsible
     nzWidth="256px"
     nzBreakpoint="md"
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null">
-    <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <h1>Ant Design Of Angular</h1>
-      </a>
+    <div class="">
+        <img class="p-4 w-38" src="https://sentriweb.com.br/wp-content/uploads/2024/11/logo-inter-activa.png" alt="logo">
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Workplace</a>
-          </li>
-        </ul>
-      </li>
-      <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
-          </li>
-        </ul>
-      </li>
+
+      <nz-divider class="bg-slate-100"></nz-divider>
+
+    <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+        <li nz-menu-item nzMatchRouter>
+            <div class="flex items-center">
+                <ngx-iconify name="solar:widget-5-line-duotone"></ngx-iconify>
+                <a *ngIf="!isCollapsed" routerLink="/dashboard" class="ml-2 text-white">Dashboard</a>
+            </div>
+        </li>
+
+        <li nz-menu-item nzMatchRouter>
+            <div class="flex items-center">
+                <ngx-iconify name="solar:wi-fi-router-line-duotone"></ngx-iconify>
+                <a *ngIf="!isCollapsed" routerLink="/rede" class="ml-2 text-white">Rede</a>
+            </div>
+        </li>
+
+        <li nz-menu-item nzMatchRouter>
+            <div class="flex items-center">
+                <ngx-iconify name="solar:station-line-duotone"></ngx-iconify>
+                <a *ngIf="!isCollapsed" routerLink="/monitoramento" class="ml-2 text-white">Monitoramento</a>
+            </div>
+        </li>
+
+        <li nz-menu-item nzMatchRouter>
+            <div class="flex items-center">
+                <ngx-iconify name="solar:settings-line-duotone"></ngx-iconify>
+                <a *ngIf="!isCollapsed" routerLink="/configuracoes" class="ml-2 text-white">Configurações</a>
+            </div>
+        </li>
+
+       <li nz-menu-item nzMatchRouter>
+           <div class="flex items-center">
+               <ngx-iconify name="solar:exit-line-duotone"></ngx-iconify>
+               <a *ngIf="!isCollapsed" routerLink="/login" class="ml-2 text-white">Sair</a>
+           </div>
+       </li>
+
+        <li class="" nz-submenu nzTitle="Equipe">
+            <ul>
+                <li nz-menu-item>Anna Clara</li>
+                <li nz-menu-item>Davi Caridade</li>
+                <li nz-menu-item>Vandson Nascimento</li>
+                <li nz-menu-item>Paulo Victor</li>
+            </ul>
+        </li>
+
     </ul>
+
   </nz-sider>
   <nz-layout>
     <nz-header>

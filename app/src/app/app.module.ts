@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
 import {NgxIconify} from "ngx-iconify";
+import {NzDividerComponent} from "ng-zorro-antd/divider";
+import {NzTypographyComponent} from "ng-zorro-antd/typography";
 
 
 registerLocaleData(pt);
@@ -30,6 +32,8 @@ registerLocaleData(pt);
     NzMenuModule,
     FormsModule,
     NgxIconify,
+    NzDividerComponent,
+    NzTypographyComponent,
   ],
   providers: [
     { provide: NZ_I18N, useValue: pt_BR },
