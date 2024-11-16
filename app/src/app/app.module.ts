@@ -16,14 +16,12 @@ import { provideHttpClient } from '@angular/common/http';
 import {NgxIconify} from "ngx-iconify";
 import {NzDividerComponent} from "ng-zorro-antd/divider";
 import {NzTypographyComponent} from "ng-zorro-antd/typography";
-import {LoginModule} from "./pages/login/login.module";
 import {RouterModule} from "@angular/router";
 
 
 registerLocaleData(pt);
 
 @NgModule({
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent
   ],
@@ -38,7 +36,6 @@ registerLocaleData(pt);
         NgxIconify,
         NzDividerComponent,
         NzTypographyComponent,
-        LoginModule,
         NzContentComponent
     ],
   providers: [

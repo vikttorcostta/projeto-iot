@@ -10,11 +10,4 @@ export class AppComponent {
 
   isCollapsed = false;
 
-  constructor(private router: Router) {
-  }
-
-  public redirecionarLogin() {
-    this.router.navigate(['/login']);
-  }
-
 }
