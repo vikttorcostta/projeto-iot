@@ -1,80 +1,105 @@
 <nz-layout class="app-layout">
-  <nz-sider nzTheme="light" class="menu-sidebar"
-    nzCollapsible
-    nzWidth="256px"
-    nzBreakpoint="md"
-    [(nzCollapsed)]="isCollapsed"
-    [nzTrigger]="null">
-    <div class="">
-        <img class="p-4 w-38" src="https://sentriweb.com.br/wp-content/uploads/2024/11/logo-inter-activa.png" alt="logo">
-    </div>
+    <nz-sider nzTheme="light" class="menu-sidebar"
+              nzCollapsible
+              nzWidth="256px"
+              nzBreakpoint="md"
+              [(nzCollapsed)]="isCollapsed"
+              [nzTrigger]="null">
+        <div class="">
+            <img class="p-4 w-38" src="https://sentriweb.com.br/wp-content/uploads/2024/11/logo-inter-activa.png" alt="logo">
+        </div>
 
-      <nz-divider class="bg-slate-100"></nz-divider>
+        <nz-divider class="bg-slate-100"></nz-divider>
 
-    <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+        <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed">
 
-        <li nz-menu-item nzMatchRouter>
-            <div class="flex items-center">
-                <ngx-iconify name="solar:widget-5-line-duotone"></ngx-iconify>
-                <a *ngIf="!isCollapsed" routerLink="/dashboard" class="ml-2 text-white">Dashboard</a>
-            </div>
-        </li>
+            <li nz-menu-item nzMatchRouter>
+                <div class="flex items-center">
+                    <ngx-iconify name="solar:widget-5-line-duotone"></ngx-iconify>
+                    <a *ngIf="!isCollapsed" routerLink="/dashboard" class="ml-2 text-white">Dashboard</a>
+                </div>
+            </li>
 
-        <li nz-menu-item nzMatchRouter>
-            <div class="flex items-center">
-                <ngx-iconify name="solar:wi-fi-router-line-duotone"></ngx-iconify>
-                <a *ngIf="!isCollapsed" routerLink="/rede" class="ml-2 text-white">Rede</a>
-            </div>
-        </li>
+            <li nz-menu-item nzMatchRouter>
+                <div class="flex items-center">
+                    <ngx-iconify name="solar:wi-fi-router-line-duotone"></ngx-iconify>
+                    <a *ngIf="!isCollapsed" routerLink="/rede" class="ml-2 text-white">Rede</a>
+                </div>
+            </li>
 
-        <li nz-menu-item nzMatchRouter>
-            <div class="flex items-center">
-                <ngx-iconify name="solar:station-line-duotone"></ngx-iconify>
-                <a *ngIf="!isCollapsed" routerLink="/monitoramento" class="ml-2 text-white">Monitoramento</a>
-            </div>
-        </li>
+            <li nz-menu-item nzMatchRouter>
+                <div class="flex items-center">
+                    <ngx-iconify name="solar:station-line-duotone"></ngx-iconify>
+                    <a *ngIf="!isCollapsed" routerLink="/monitoramento" class="ml-2 text-white">Monitoramento</a>
+                </div>
+            </li>
 
-        <li nz-menu-item nzMatchRouter>
-            <div class="flex items-center">
-                <ngx-iconify name="solar:settings-line-duotone"></ngx-iconify>
-                <a *ngIf="!isCollapsed" routerLink="/configuracoes" class="ml-2 text-white">Configurações</a>
-            </div>
-        </li>
+            <li nz-menu-item nzMatchRouter>
+                <div class="flex items-center">
+                    <ngx-iconify name="solar:settings-line-duotone"></ngx-iconify>
+                    <a *ngIf="!isCollapsed" routerLink="/configuracoes" class="ml-2">Configurações</a>
+                </div>
+            </li>
 
-       <li nz-menu-item nzMatchRouter>
-           <div class="flex items-center">
-               <ngx-iconify name="solar:exit-line-duotone"></ngx-iconify>
-               <a *ngIf="!isCollapsed" routerLink="/login" class="ml-2 text-white">Sair</a>
-           </div>
-       </li>
+            <nz-divider class="bg-slate-100"></nz-divider>
 
-        <li class="" nz-submenu nzTitle="Equipe">
-            <ul>
-                <li nz-menu-item>Anna Clara</li>
-                <li nz-menu-item>Davi Caridade</li>
-                <li nz-menu-item>Vandson Nascimento</li>
-                <li nz-menu-item>Paulo Victor</li>
-            </ul>
-        </li>
+            <li class="" nz-submenu nzTitle="Equipe">
+                <ul>
+                    <li nz-menu-item>
+                        <div class="flex items-center" >
+                            <ngx-iconify name="solar:user-circle-line-duotone"></ngx-iconify>
+                            <p class="ml-2" >Ana Clara</p>
+                        </div>
+                    </li>
 
-    </ul>
+                    <li nz-menu-item>
+                        <div class="flex items-center" >
+                            <ngx-iconify name="solar:user-circle-line-duotone"></ngx-iconify>
+                            <p class="ml-2" >Davi Caridade</p>
+                        </div>
+                    </li>
 
-  </nz-sider>
-  <nz-layout>
-    <nz-header>
-      <div class="app-header">
+                    <li nz-menu-item>
+                        <div class="flex items-center" >
+                            <ngx-iconify name="solar:user-circle-line-duotone"></ngx-iconify>
+                            <p class="ml-2" >Vandson Nascimento</p>
+                        </div>
+                    </li>
+
+                    <li nz-menu-item>
+                        <div class="flex items-center" >
+                            <ngx-iconify name="solar:user-circle-line-duotone"></ngx-iconify>
+                            <p class="ml-2" >Vinicius</p>
+                        </div>
+                    </li>
+
+                    <li nz-menu-item>
+                        <div class="flex items-center" >
+                            <ngx-iconify name="solar:user-circle-line-duotone"></ngx-iconify>
+                            <p class="ml-2" >Paulo Victor</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+            <div class="app-header">
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
             <span class="trigger"
-               nz-icon
-               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                  nz-icon
+                  [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             ></span>
         </span>
-      </div>
-    </nz-header>
-    <nz-content>
-      <div class="inner-content">
-        <router-outlet></router-outlet>
-      </div>
-    </nz-content>
-  </nz-layout>
+            </div>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+        </nz-content>
+    </nz-layout>
 </nz-layout>

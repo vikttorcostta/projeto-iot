@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconsProviderModule } from './icons-provider.module';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import {NzContentComponent, NzLayoutModule} from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { pt_BR } from 'ng-zorro-antd/i18n';
@@ -16,25 +16,31 @@ import { provideHttpClient } from '@angular/common/http';
 import {NgxIconify} from "ngx-iconify";
 import {NzDividerComponent} from "ng-zorro-antd/divider";
 import {NzTypographyComponent} from "ng-zorro-antd/typography";
+import {LoginModule} from "./pages/login/login.module";
+import {RouterModule} from "@angular/router";
 
 
 registerLocaleData(pt);
 
 @NgModule({
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    IconsProviderModule,
-    NzLayoutModule,
-    NzMenuModule,
-    FormsModule,
-    NgxIconify,
-    NzDividerComponent,
-    NzTypographyComponent,
-  ],
+    imports: [
+        RouterModule,
+        BrowserModule,
+        AppRoutingModule,
+        IconsProviderModule,
+        NzLayoutModule,
+        NzMenuModule,
+        FormsModule,
+        NgxIconify,
+        NzDividerComponent,
+        NzTypographyComponent,
+        LoginModule,
+        NzContentComponent
+    ],
   providers: [
     { provide: NZ_I18N, useValue: pt_BR },
     provideAnimationsAsync(),
